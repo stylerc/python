@@ -4,7 +4,7 @@ OUT=$1
 
 if [ ! $OUT ]; then
   curl -s  www.strandtheatre.com > play.txt
-  grep 'now_playing' ./play.txt | cut -d '>' -f2 |cut -d '<' -f1
+  grep 'now_playing' ./play.txt | cut -d '>' -f2 |cut -d '<' -f1 | cowsay -f dragon
 else
   echo "$OUT" | cowsay -f dragon
 fi
